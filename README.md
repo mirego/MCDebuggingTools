@@ -4,7 +4,7 @@ Collection of debuging tools that can be added to your project
 
 ## Usage
 
-```
+```objective-c
 #import "AppDelegate.h"
 #import "MCMemoryWarningGenerators.h"
 
@@ -52,7 +52,7 @@ If you're using [`CocoaPods`](http://cocoapods.org/), there's nothing simpler.
 Add the following to your [`Podfile`](http://docs.cocoapods.org/podfile.html)
 and run `pod install`.
 
-```
+```objective-c
 pod 'MCDebuggingTools', :git => 'https://github.com/mirego/MCDebuggingTools.git'
 ```
 
