@@ -52,7 +52,7 @@ If you're using [`CocoaPods`](http://cocoapods.org/), there's nothing simpler.
 Add the following to your [`Podfile`](http://docs.cocoapods.org/podfile.html)
 and run `pod install`.
 
-```objective-c
+```ruby
 pod 'MCDebuggingTools', :git => 'https://github.com/mirego/MCDebuggingTools.git'
 ```
 
