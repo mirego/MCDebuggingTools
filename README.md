@@ -46,6 +46,56 @@ PERFORM_MEMORY_WARNING_AT_INTERVAL(interval);
 ALLOCATE_MEMORY_BLOCK_AT_INTERNAL(interval)
 ```
 
+### MCServerEnvironment
+MCServerEnvironment helps to switch client base URL easily.
+
+```objective-c
+// Before initializing your MCServerEnvironment and client objects, 
+// create every URLs needed for your environment switcher
+NSURL *devURL = [NSURL URLWithString:@"http://localhost"];
+NSURL *ciURL = [NSURL URLWithString:@"http://api.gametime.ci.mirego.com/"];
+NSURL *qaURL = [NSURL URLWithString:@"http://api.gametime.qa.mirego.com/"];
+NSURL *stagingURL = [NSURL URLWithString:@"http://api.gametime.staging.mirego.com/"];
+NSURL *productionURL = [NSURL URLWithString:@"http://api.gametime.prod.mirego.com/"];
+
+// A default URL is required at MCServerEnvironment initialization
+NSURL *defaultURL = nil;
+
+#ifdef PROD_API
+    defaultURL = stagingURL;
+#elif STAGING_API
+    defaultURL = stagingURL;
+#elif QA_API
+    defaultURL = qaURL;
+#elif DEBUG
+    defaultURL = ciURL;
+#endif
+
+// Create MCServerEnvironment object with needed URLs
+_serverEnvironment = [[MCServerEnvironment alloc] initWithDefaultURL:defaultURL developmentURL:nil ciURL:ciURL qaURL:qaURL stagingURL:stagingURL productionURL:productionURL otherURLs:nil];
+
+// Create your client object with MCServerEnvironment URL method
+AFHTTPClient *client = [[AFHTTPClient alloc] initWithBaseURL:[_serverEnvironment URL]];
+``` 
+```objective-c
+// Required
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
+{
+    // Tell MCServerEnvironment an URL Scheme has been called and give it a presenter view controller
+    // If the URL host is equals to "env", a view controller will be presented  
+    [_serverEnvironment openURL:url presenterViewController:self.window.rootViewController completionBlock:nil];
+    return YES;
+}
+
+// Optional
+- (void)applicationDidBecomeActive:(UIApplication *)application
+{
+    // This will show an alert for 3 seconds with the setted base URL if it's not the default
+    [_serverEnvironment showDebugAlert];
+}
+```
+
+
 ## Adding to your project
 
 If you're using [`CocoaPods`](http://cocoapods.org/), there's nothing simpler.
