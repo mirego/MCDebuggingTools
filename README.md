@@ -53,10 +53,10 @@ MCServerEnvironment helps to switch client base URL easily.
 // Before initializing your MCServerEnvironment and client objects, 
 // create every URLs needed for your environment switcher
 NSURL *devURL = [NSURL URLWithString:@"http://localhost"];
-NSURL *ciURL = [NSURL URLWithString:@"http://api.gametime.ci.mirego.com/"];
-NSURL *qaURL = [NSURL URLWithString:@"http://api.gametime.qa.mirego.com/"];
-NSURL *stagingURL = [NSURL URLWithString:@"http://api.gametime.staging.mirego.com/"];
-NSURL *productionURL = [NSURL URLWithString:@"http://api.gametime.prod.mirego.com/"];
+NSURL *ciURL = [NSURL URLWithString:@"http://api.yourserver.ci.com/"];
+NSURL *qaURL = [NSURL URLWithString:@"http://api.yourserver.qa.com/"];
+NSURL *stagingURL = [NSURL URLWithString:@"http://api.yourserver.staging.com/"];
+NSURL *productionURL = [NSURL URLWithString:@"http://api.yourserver.prod.com/"];
 
 // A default URL is required at MCServerEnvironment initialization
 NSURL *defaultURL = nil;
