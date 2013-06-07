@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name     = 'MCDebuggingTools'
-  s.version  = '0.5.0'
+  s.version  = '0.5.1'
   s.license  = 'BSD 3-Clause'
   s.summary  = 'Various debugging tools to make your life easier.'
   s.homepage = 'https://github.com/mirego/MCDebuggingTools'
