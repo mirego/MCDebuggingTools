@@ -6,7 +6,7 @@ Pod::Spec.new do |s|
   s.homepage = 'https://github.com/mirego/MCDebuggingTools'
   s.authors  = { 'Mirego' => 'info@mirego.com' }
   s.source   = { :git => 'https://github.com/mirego/MCDebuggingTools.git', :tag => s.version.to_s }
-  s.source_files = 'MCDebuggingTools/*.{h,m}'
+  s.source_files = 'MCDebuggingTools/**/*.{h,m}'
   s.requires_arc = true
   s.platform = :ios, '5.0'
 end
