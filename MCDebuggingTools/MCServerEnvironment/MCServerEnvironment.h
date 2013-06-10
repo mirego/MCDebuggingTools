@@ -46,7 +46,7 @@ typedef NS_ENUM(NSInteger, MCServerEnvironmentType) {
            productionURL:(NSURL *)productionURL
                otherURLs:(NSURL *)otherURLs, ... NS_REQUIRES_NIL_TERMINATION;
 
-- (void)openURL:(NSURL *)url presenterViewController:(UIViewController *)presenterViewController completionBlock:(void (^)(void))completionBlock;
+- (BOOL)openURL:(NSURL *)url presenterViewController:(UIViewController *)presenterViewController completionBlock:(void (^)(void))completionBlock;
 - (NSURL *)URL;
 - (void)showDebugAlert;
 

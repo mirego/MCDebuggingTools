@@ -84,7 +84,7 @@ static NSString* const kMCServerEnvironmentURLResetParameterValue = @"reset";
 #pragma mark - Public
 //------------------------------------------------------------------------------
 
-- (void)openURL:(NSURL *)url presenterViewController:(UIViewController *)presenterViewController completionBlock:(void (^)(void))completionBlock
+- (BOOL)openURL:(NSURL *)url presenterViewController:(UIViewController *)presenterViewController completionBlock:(void (^)(void))completionBlock
 {
     if ([[self URLAction:url] isEqualToString:kMCServerEnvironmentURLSchemeAction]) {
         NSDictionary *parameters = [self URLParameters:url];
@@ -101,7 +101,9 @@ static NSString* const kMCServerEnvironmentURLResetParameterValue = @"reset";
             UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:_viewController];
             [presenterViewController presentViewController:navigationController animated:YES completion:completionBlock];
         }
+        return YES;
     }
+    return NO;
 }
 
 - (NSURL *)URL
