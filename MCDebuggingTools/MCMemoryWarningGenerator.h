@@ -67,7 +67,10 @@
 
 + (void)performMemoryWarning {
 #if !TARGET_IPHONE_SIMULATOR
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wundeclared-selector"
     [[UIApplication sharedApplication] performSelector:@selector(_performMemoryWarning)];
+#pragma clang diagnostic pop
 #else
     [[NSNotificationCenter defaultCenter] postNotificationName:UIApplicationDidReceiveMemoryWarningNotification object:[UIApplication sharedApplication]];
 #endif
