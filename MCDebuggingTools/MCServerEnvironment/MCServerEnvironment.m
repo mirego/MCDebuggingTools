@@ -286,19 +286,19 @@ static NSString* const kMCServerEnvironmentLocalizedProd = @"Production (AppStor
     NSString *localizedType = nil;
     switch (_type) {
         case MCServerEnvironmentDevelopment:
-            localizedType = kMCServerEnvironmentLocalizedDev;
+            localizedType = NSLocalizedString(kMCServerEnvironmentLocalizedDev, nil);
             break;
         case MCServerEnvironmentCI:
-            localizedType = kMCServerEnvironmentLocalizedCI;
+            localizedType = NSLocalizedString(kMCServerEnvironmentLocalizedCI, nil);
             break;
         case MCServerEnvironmentQA:
-            localizedType = kMCServerEnvironmentLocalizedQA;
+            localizedType = NSLocalizedString(kMCServerEnvironmentLocalizedQA, nil);
             break;
         case MCServerEnvironmentStaging:
-            localizedType = kMCServerEnvironmentLocalizedStaging;
+            localizedType = NSLocalizedString(kMCServerEnvironmentLocalizedStaging, nil);
             break;
         case MCServerEnvironmentProduction:
-            localizedType = kMCServerEnvironmentLocalizedProd;
+            localizedType = NSLocalizedString(kMCServerEnvironmentLocalizedProd, nil);
             break;
         default:
         case MCServerEnvironmentUnknow:
