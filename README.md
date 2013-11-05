@@ -1,4 +1,6 @@
 # MCDebuggingTools - Extermination helper
+[![Badge w/ Version](https://cocoapod-badges.herokuapp.com/v/MCDebuggingTools/badge.png)](https://cocoadocs.org/docsets/MCDebuggingTools)
+[![Badge w/ Platform](https://cocoapod-badges.herokuapp.com/p/MCDebuggingTools/badge.png)](https://cocoadocs.org/docsets/MCDebuggingTools)
 
 Collection of debuging tools that can be added to your project
 
