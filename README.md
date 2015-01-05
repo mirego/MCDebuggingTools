@@ -52,7 +52,7 @@ ALLOCATE_MEMORY_BLOCK_AT_INTERNAL(interval)
 MCServerEnvironment helps to switch client base URL easily.
 
 ```objective-c
-// Before initializing your MCServerEnvironment and client objects, 
+// Before initializing your MCServerEnvironment and client objects,
 // create every URLs needed for your environment switcher
 NSURL *devURL = [NSURL URLWithString:@"http://localhost"];
 NSURL *ciURL = [NSURL URLWithString:@"http://api.yourserver.ci.com/"];
@@ -78,13 +78,13 @@ _serverEnvironment = [[MCServerEnvironment alloc] initWithDefaultURL:defaultURL 
 
 // Create your client object with MCServerEnvironment URL method
 AFHTTPClient *client = [[AFHTTPClient alloc] initWithBaseURL:[_serverEnvironment URL]];
-``` 
+```
 ```objective-c
 // Required
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
 {
     // Tell MCServerEnvironment an URL Scheme has been called and give it a presenter view controller
-    // If the URL host is equals to "env", a view controller will be presented  
+    // If the URL host is equals to "env", a view controller will be presented
     [_serverEnvironment openURL:url presenterViewController:self.window.rootViewController completionBlock:nil];
     return YES;
 }
@@ -113,7 +113,7 @@ Don't forget to `#import "MCMemoryWarningGenerators.h"` where it's needed.
 
 ## License
 
-MCDebuggingTools is © 2013 [Mirego](http://www.mirego.com) and may be freely
+MCDebuggingTools is © 2013-2015 [Mirego](http://www.mirego.com) and may be freely
 distributed under the [New BSD license](http://opensource.org/licenses/BSD-3-Clause).
 See the [`LICENSE.md`](https://github.com/mirego/MCDebuggingTools/blob/master/LICENSE.md) file.
 
