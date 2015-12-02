@@ -1,0 +1,18 @@
+PODS:
+  - MCDebuggingTools (1.0):
+    - MCDebuggingTools/MemoryWarningGenerator (= 1.0)
+    - MCDebuggingTools/ServerEnvironment (= 1.0)
+  - MCDebuggingTools/MemoryWarningGenerator (1.0)
+  - MCDebuggingTools/ServerEnvironment (1.0)
+
+DEPENDENCIES:
+  - MCDebuggingTools (from `../`)
+
+EXTERNAL SOURCES:
+  MCDebuggingTools:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  MCDebuggingTools: b96153f1f5aaa60225857f88c079071e1f06dd3a
+
+COCOAPODS: 0.39.0

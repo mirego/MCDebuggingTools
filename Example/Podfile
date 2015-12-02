@@ -1,0 +1,9 @@
+source 'https://github.com/CocoaPods/Specs.git'
+
+target 'MCDebuggingTools_Example', :exclusive => true do
+  pod "MCDebuggingTools", :path => "../"
+end
+
+target 'MCDebuggingTools_Tests', :exclusive => true do
+  pod "MCDebuggingTools", :path => "../"
+end
