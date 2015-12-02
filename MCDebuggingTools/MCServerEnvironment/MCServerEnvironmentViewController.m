@@ -1,4 +1,4 @@
-// Copyright (c) 2013, Mirego
+// Copyright (c) 2013-2015, Mirego
 // All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
@@ -59,7 +59,7 @@
     [self.view addSubview:_tableView];
     
     UIBarButtonItem* saveButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSave target:self action:@selector(save:)];
-    UIBarButtonItem* resetDefaultButton = [[UIBarButtonItem alloc] initWithTitle:@"Reset default" style:UIBarButtonItemStyleBordered target:self action:@selector(resetDefault:)];
+    UIBarButtonItem* resetDefaultButton = [[UIBarButtonItem alloc] initWithTitle:@"Reset default" style:UIBarButtonItemStylePlain target:self action:@selector(resetDefault:)];
     [self.navigationItem setRightBarButtonItems:@[saveButton, resetDefaultButton]];
     UIBarButtonItem* cancelButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(cancel:)];
     [self.navigationItem setLeftBarButtonItem:cancelButton];
